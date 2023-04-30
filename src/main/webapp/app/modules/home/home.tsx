@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import { Row, Col, Alert } from 'reactstrap';
 
 import { useAppSelector } from 'app/config/store';
+import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
+import PrimarySearchAppBar from './searchbar';
+import SearchAppBar from './searchbar';
 
 export const Home = () => {
   const account = useAppSelector(state => state.authentication.account);
@@ -44,7 +47,7 @@ export const Home = () => {
             </Alert>
           </div>
         )}
-
+        <SearchAppBar></SearchAppBar>
         {/* <ul>
           <li>
             <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">
