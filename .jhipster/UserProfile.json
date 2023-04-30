@@ -1,0 +1,46 @@
+{
+  "applications": "*",
+  "changelogDate": "20230430003217",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "user_profile",
+  "fields": [
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserProfile",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "userProfile",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "tripPlan",
+      "otherEntityRelationshipName": "userProfile",
+      "relationshipName": "plans",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "userProfile",
+      "relationshipName": "friends",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "friends",
+      "relationshipName": "userProfile",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

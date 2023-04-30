@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20230430003218",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "trip_plan",
+  "fields": [
+    {
+      "fieldName": "tripName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "totalDays",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "review",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TripPlan",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "tripDay",
+      "otherEntityRelationshipName": "tripPlan",
+      "relationshipName": "tripDays",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "plans",
+      "relationshipName": "userProfile",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

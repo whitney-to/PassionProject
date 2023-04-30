@@ -48,6 +48,15 @@ public class CacheConfiguration {
             createCache(cm, com.tourista.domain.User.class.getName());
             createCache(cm, com.tourista.domain.Authority.class.getName());
             createCache(cm, com.tourista.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.tourista.domain.UserProfile.class.getName());
+            createCache(cm, com.tourista.domain.UserProfile.class.getName() + ".plans");
+            createCache(cm, com.tourista.domain.UserProfile.class.getName() + ".friends");
+            createCache(cm, com.tourista.domain.TripPlan.class.getName());
+            createCache(cm, com.tourista.domain.TripPlan.class.getName() + ".tripDays");
+            createCache(cm, com.tourista.domain.Location.class.getName());
+            createCache(cm, com.tourista.domain.TripDay.class.getName());
+            createCache(cm, com.tourista.domain.TripDay.class.getName() + ".activities");
+            createCache(cm, com.tourista.domain.Activity.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

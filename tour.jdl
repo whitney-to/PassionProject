@@ -1,0 +1,57 @@
+
+entity UserProfile {
+    phone String,
+}
+
+entity TripPlan {
+	tripName String,
+    startDate String,
+    endDate String,
+    totalDays Integer,
+    review String
+}
+
+entity Location {
+	locationName String,
+	latitude Float,
+    longitude Float
+}
+
+entity TripDay{
+	date LocalDate,
+}
+
+entity Activity{
+	time String,
+}
+
+relationship OneToMany {
+    TripPlan{tripDays} to TripDay,
+    UserProfile{plans} to TripPlan,
+    TripDay{activities} to Activity,
+    UserProfile{friends} to UserProfile
+}
+
+//relationship ManyToOne{
+//	UserProfile{friends} to UserProfile
+//}
+
+relationship OneToOne {
+	UserProfile to User,
+    Activity{Location(locationName)} to Location   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+enum TripCategory {
+    PARKS, SIGHTSEEING, FOOD, WINE, NIGHTLIGHT, HISTORIC_SITES, LANDMARKS
+}

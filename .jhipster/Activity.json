@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20230430003221",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "activity",
+  "fields": [
+    {
+      "fieldName": "time",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Activity",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "locationName",
+      "otherEntityName": "location",
+      "ownerSide": true,
+      "relationshipName": "location",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "tripDay",
+      "otherEntityRelationshipName": "activities",
+      "relationshipName": "tripDay",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

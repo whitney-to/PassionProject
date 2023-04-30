@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20230430003220",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "trip_day",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TripDay",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "activity",
+      "otherEntityRelationshipName": "tripDay",
+      "relationshipName": "activities",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "tripPlan",
+      "otherEntityRelationshipName": "tripDays",
+      "relationshipName": "tripPlan",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
